@@ -1,0 +1,35 @@
+# General
+*.log
+*.swp
+*.swo
+.DS_Store
+.env
+
+# Ruby
+/.bundle/
+/vendor/
+*.gem
+
+# Database
+*.sqlite3
+*.sqlite3-*
+
+# Rails
+/public/assets
+/public/packs
+/node_modules/
+/tmp/
+/storage/
+
+# Service-specific ignores
+service1/log/
+service1/tmp/
+service2/log/
+service2/tmp/
+
+service1/storage/*
+service2/storage/*
+
+# Ignore master key for decrypting credentials and more.
+service1/config/master.key
+service2/config/master.key
