@@ -1,0 +1,6 @@
+[submodule "service1"]
+	path = service1
+	url = git@github.com:doston9471/microservices-ruby-service1.git
+[submodule "service2"]
+	path = service2
+	url = git@github.com:doston9471/microservices-ruby-service2.git
