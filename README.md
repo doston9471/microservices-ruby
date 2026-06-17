@@ -15,13 +15,44 @@ Two Ruby on Rails services communicating via HTTP:
 ## Installation
 
 ```bash
-# Clone repository
-git clone git@github.com:doston9471/microservices-ruby.git
+# Clone repository with submodules
+git clone --recurse-submodules git@github.com:doston9471/microservices-ruby.git
 cd microservices-ruby
+
+# If you already cloned without submodules, initialize them instead:
+# git submodule update --init --recursive
 
 # Install dependencies for both services
 cd service1 && bundle install && cd ..
 cd service2 && bundle install && cd ..
+```
+
+## Submodules
+
+`service1` and `service2` are Git submodules with their own repositories:
+
+- [microservices-ruby-service1](https://github.com/doston9471/microservices-ruby-service1)
+- [microservices-ruby-service2](https://github.com/doston9471/microservices-ruby-service2)
+
+After you push changes to `service1` or `service2`, pull those updates into this repo:
+
+```bash
+# From the microservices-ruby root directory
+
+# Fetch and checkout the latest commit on each submodule's default branch
+git submodule update --init --remote service1 service2
+
+# Optional: record the new submodule pointers in this repo
+git add service1 service2
+git commit -m "Update service1 and service2 submodules"
+```
+
+To pull only one service:
+
+```bash
+git submodule update --init --remote service1
+# or
+git submodule update --init --remote service2
 ```
 
 ## Run services
