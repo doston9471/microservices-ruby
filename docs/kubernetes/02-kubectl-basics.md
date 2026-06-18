@@ -557,4 +557,4 @@ The container image is minimal. Use `busybox` or your app image for shell access
 
 **Step 3:** Build Docker images for `service1` and `service2`, then load them into the kind cluster so Kubernetes can run them.
 
-See: [03-build-and-load-images.md](./03-build-and-load-images.md) *(next session)*
+See: [03-build-and-load-images.md](./03-build-and-load-images.md)
