@@ -271,7 +271,7 @@ Answer these without looking; if any are shaky, re-read the section above.
 
 **Step 1:** Install Docker, `kubectl`, and `kind`; create your first local cluster.
 
-See: [01-cluster-setup.md](./01-cluster-setup.md) *(created in the next session)*
+See: [01-cluster-setup.md](./01-cluster-setup.md)
 
 ---
 
