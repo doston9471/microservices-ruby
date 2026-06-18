@@ -360,4 +360,4 @@ Use this when setting up on a new Mac or after a long break:
 
 **Step 2:** Learn `kubectl` basics — contexts, namespaces, `get`, `describe`, `logs`, and `exec` — using the system pods already running in your cluster.
 
-See: [02-kubectl-basics.md](./02-kubectl-basics.md) *(next session)*
+See: [02-kubectl-basics.md](./02-kubectl-basics.md)
