@@ -289,4 +289,4 @@ Normal for Rails + gems + Thruster. Optimizations (multi-stage, .dockerignore) a
 
 **Step 4:** Deploy `service2` (Products) as your first real workload — Pod, then Deployment + Service, and reach the API with `kubectl port-forward`.
 
-See: [04-deploy-service2.md](./04-deploy-service2.md) *(next session)*
+See: [04-deploy-service2.md](./04-deploy-service2.md)

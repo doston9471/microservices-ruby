@@ -1,0 +1,29 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: products-service
+  namespace: microservices
+  labels:
+    app: products-service
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: products-service
+  template:
+    metadata:
+      labels:
+        app: products-service
+    spec:
+      containers:
+        - name: products
+          image: service2:local
+          imagePullPolicy: Never
+          ports:
+            - containerPort: 80
+          env:
+            - name: RAILS_MASTER_KEY
+              valueFrom:
+                secretKeyRef:
+                  name: products-service-secrets
+                  key: RAILS_MASTER_KEY

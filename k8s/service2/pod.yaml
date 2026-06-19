@@ -1,0 +1,21 @@
+# Step 4a: bare Pod (learning only — use Deployment in practice)
+apiVersion: v1
+kind: Pod
+metadata:
+  name: products-pod
+  namespace: microservices
+  labels:
+    app: products-service
+spec:
+  containers:
+    - name: products
+      image: service2:local
+      imagePullPolicy: Never
+      ports:
+        - containerPort: 80
+      env:
+        - name: RAILS_MASTER_KEY
+          valueFrom:
+            secretKeyRef:
+              name: products-service-secrets
+              key: RAILS_MASTER_KEY
