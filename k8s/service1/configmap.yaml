@@ -1,0 +1,12 @@
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: users-service-config
+  namespace: microservices
+  labels:
+    app: users-service
+data:
+  RAILS_ENV: production
+  RAILS_LOG_LEVEL: info
+  # Kubernetes DNS: Service name in the same namespace
+  PRODUCTS_SERVICE_URL: http://products-service

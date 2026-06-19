@@ -21,9 +21,8 @@ spec:
           imagePullPolicy: Never
           ports:
             - containerPort: 80
-          env:
-            - name: RAILS_MASTER_KEY
-              valueFrom:
-                secretKeyRef:
-                  name: products-service-secrets
-                  key: RAILS_MASTER_KEY
+          envFrom:
+            - configMapRef:
+                name: products-service-config
+            - secretRef:
+                name: products-service-secrets

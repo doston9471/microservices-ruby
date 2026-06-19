@@ -432,4 +432,4 @@ SQLite lives inside the container filesystem for now. **Step 7** adds a Persiste
 
 **Step 5:** Refine secrets and configuration (ConfigMaps), and prepare for service1 → service2 communication.
 
-See: [05-secrets-and-config.md](./05-secrets-and-config.md) *(next session)*
+See: [05-secrets-and-config.md](./05-secrets-and-config.md)

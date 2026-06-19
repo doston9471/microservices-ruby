@@ -1,0 +1,10 @@
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: products-service-config
+  namespace: microservices
+  labels:
+    app: products-service
+data:
+  RAILS_ENV: production
+  RAILS_LOG_LEVEL: info
