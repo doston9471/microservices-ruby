@@ -340,4 +340,4 @@ kubectl rollout restart deployment/products-service -n microservices
 
 **Step 6:** Deploy service1 (Users) using the same ConfigMap + Secret pattern, and verify cross-service call `GET /api/v1/products` through Users.
 
-See: [06-deploy-service1.md](./06-deploy-service1.md) *(next session)*
+See: [06-deploy-service1.md](./06-deploy-service1.md)
