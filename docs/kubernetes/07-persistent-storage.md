@@ -286,4 +286,4 @@ kubectl rollout restart deployment/users-service -n microservices
 
 **Step 8:** Add health probes (`livenessProbe` / `readinessProbe`) using Rails `/up` endpoint.
 
-See: [08-health-probes.md](./08-health-probes.md) *(next session)*
+See: [08-health-probes.md](./08-health-probes.md)
