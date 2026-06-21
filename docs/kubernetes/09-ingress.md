@@ -251,4 +251,4 @@ kubectl delete -f https://raw.githubusercontent.com/kubernetes/ingress-nginx/mai
 
 **Step 10:** Namespace cleanup, `kustomization.yaml`, and full teardown checklist — put the cluster away when you are done learning.
 
-See: [10-cleanup-and-recap.md](./10-cleanup-and-recap.md) *(next session)*
+See: [10-cleanup-and-recap.md](./10-cleanup-and-recap.md)

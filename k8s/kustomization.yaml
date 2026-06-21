@@ -1,0 +1,22 @@
+apiVersion: kustomize.config.k8s.io/v1beta1
+kind: Kustomization
+
+namespace: microservices
+
+resources:
+  - namespace.yaml
+  - service1/configmap.yaml
+  - service1/deployment.yaml
+  - service1/service.yaml
+  - service1/pvc.yaml
+  - service2/configmap.yaml
+  - service2/deployment.yaml
+  - service2/service.yaml
+  - service2/pvc.yaml
+  - ingress.yaml
+
+# Secrets are not included — create imperatively from local master.key files:
+#   kubectl create secret generic users-service-secrets \
+#     --from-literal=RAILS_MASTER_KEY="$(cat service1/config/master.key)" -n microservices
+#   kubectl create secret generic products-service-secrets \
+#     --from-literal=RAILS_MASTER_KEY="$(cat service2/config/master.key)" -n microservices
