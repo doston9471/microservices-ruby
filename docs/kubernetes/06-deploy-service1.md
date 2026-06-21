@@ -341,4 +341,4 @@ git commit -m "Update service1 submodule"
 
 **Step 7:** Add PersistentVolumeClaims so SQLite databases survive Pod restarts.
 
-See: [07-persistent-storage.md](./07-persistent-storage.md) *(next session)*
+See: [07-persistent-storage.md](./07-persistent-storage.md)

@@ -15,6 +15,8 @@ spec:
       labels:
         app: products-service
     spec:
+      securityContext:
+        fsGroup: 1000
       containers:
         - name: products
           image: service2:local
@@ -26,3 +28,10 @@ spec:
                 name: products-service-config
             - secretRef:
                 name: products-service-secrets
+          volumeMounts:
+            - name: storage
+              mountPath: /rails/storage
+      volumes:
+        - name: storage
+          persistentVolumeClaim:
+            claimName: products-service-data

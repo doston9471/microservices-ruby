@@ -15,6 +15,8 @@ spec:
       labels:
         app: users-service
     spec:
+      securityContext:
+        fsGroup: 1000
       containers:
         - name: users
           image: service1:local
@@ -26,3 +28,10 @@ spec:
                 name: users-service-config
             - secretRef:
                 name: users-service-secrets
+          volumeMounts:
+            - name: storage
+              mountPath: /rails/storage
+      volumes:
+        - name: storage
+          persistentVolumeClaim:
+            claimName: users-service-data

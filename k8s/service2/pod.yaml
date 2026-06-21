@@ -18,3 +18,12 @@ spec:
             name: products-service-config
         - secretRef:
             name: products-service-secrets
+      volumeMounts:
+        - name: storage
+          mountPath: /rails/storage
+  securityContext:
+    fsGroup: 1000
+  volumes:
+    - name: storage
+      persistentVolumeClaim:
+        claimName: products-service-data
