@@ -266,4 +266,4 @@ kubectl get pods -n microservices -w
 
 **Step 9:** Expose services with **Ingress** (optional) — route traffic from your Mac without separate port-forwards.
 
-See: [09-ingress.md](./09-ingress.md) *(next session)*
+See: [09-ingress.md](./09-ingress.md)
